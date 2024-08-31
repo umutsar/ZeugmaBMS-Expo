@@ -23,7 +23,7 @@ import {
   State as BluetoothState, 
   LogLevel 
 } from 'react-native-ble-plx';
-
+// import { BLEService } from './BLEService';
 
 
 // Örnek batarya hücre verisi
@@ -148,6 +148,8 @@ function SettingsTabs() {
 // Ana Uygulama Bileşeni
 function App() {
 
+  const [devices, setDevices] = useState([]);
+  const [isScanning, setIsScanning] = useState(false);
 
   return (
     <SafeAreaProvider>
